@@ -327,6 +327,7 @@ zrange set1 0 -1
 # -inf +inf表示负无穷 正无穷
 # 表示从最小到最大进行排序 -- 递增显示，使用zrangebyscore set1 +inf -inf递减显示难道不行？如果不行就用zrevrange set1 0 -1，新版本的+inf -inf貌似没法用
 zrangebyscore set1 -inf +inf
+# zrevrange set1 start end ==> 将zset反过来，按照反过来的顺序获取start~end的数据
 zrevrange set1 0 -1 # 从大到小进行排序，【用数字表示是否为递增/递减】
 
 # 连着score一块显示
